@@ -1,0 +1,265 @@
+/* *Family-Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* ?Inicio Estilo Geral */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #313131;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.title {
+    font-family: "Lato", sans-serif;
+    font-size: 2em;
+    font-weight: 300px;
+    color: #ff7f50;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.normal_txt {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    font-weight: 300px;
+    color: #eee;
+    text-align: justify;
+    /* font- */
+}
+.btn-orange {
+    font-family: "Open Sans", sans-serif;
+    border: none;
+    height: 40px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1em;
+    border-radius: 6px;
+    background-color: #ff7f50;
+    color: #eee;
+    cursor: pointer;
+}
+.btn-orange:hover {
+    background-color: #eee;
+    color: #ff7f50;
+}
+/* !Fim Estilo Geral */
+
+/* ?Inicio Estilo Header */
+.header {
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #232323;
+    width: 100%;
+    height: 80px;
+    border-bottom: solid #e26f10 5px;
+    font-family: "Lato", sans-serif;
+}
+
+.header h1 {
+    float: left;
+    color: #eee;
+    font-size: 2em;
+}
+.header h1 a {
+    text-decoration: none;
+    color: #eee;
+}
+
+.header ul {
+    /* *Tira as "bolinhas" da lista */
+    list-style: none;
+    float: right;
+    height: 48px;
+    background-color: #444444;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 6px;
+    margin: 5px;
+    border-radius: 5px 5px 0px 0px;
+}
+.header li {
+    /* *Coloca os elementos <li> na mesma linha como blocos */
+    height: 30px;
+    display: inline-block;
+    font-size: 24px;
+    /* margin: 5px; */
+    border-radius: 5px;
+    padding: 6px;
+}
+.header li:hover {
+    background-color: #eee;
+}
+.header ul li a:hover {
+    color: #444444;
+}
+
+.header ul li a {
+    /* *Tira o Estilo do Link */
+    text-decoration: none;
+    margin: 0 15px;
+    color: #eee;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+/* *Colocando estilos em mais de um objeto */
+.header h1,
+.header ul {
+    margin-top: 20px;
+}
+
+.header .text-orange {
+    color: rgb(226, 111, 16);
+}
+
+/* !Fim Estilo Header */
+
+/* ?Banner */
+.banner {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    background-color: #ff7f50;
+    /* text-align: center; */
+    background-image: url("./img/banner-fundo.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+.text-banner h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    color: #eee;
+    padding: 8px;
+    background-color: #ff7f50;
+    border-radius: 10px;
+    font-size: 4em;
+    font-weight: 300;
+}
+.text-banner h3 {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    color: #ff7f50;
+    text-indent: 10px;
+    padding-top: 10px;
+    font-size: 2em;
+    font-weight: 300;
+}
+/* !Banner */
+
+/* ? Start Container News */
+.containerNews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #232323;
+}
+/* !End Container News */
+
+/* ?Start Box */
+.box {
+    text-align: center;
+}
+
+.box .box-item {
+    display: inline-block;
+    width: 25%;
+    margin-top: 60px;
+    padding: 50px;
+}
+.box .box-item img {
+    width: 300px;
+    height: 300px;
+}
+/* !End Box */
+
+/* ?Start Footer */
+.footer {
+    width: 100%;
+    height: 80px;
+    display: inline-block;
+    background-color: #e26f10;
+    border-top: solid #232323 5px;
+    bottom: 0;
+    right: 0;
+}
+/* !Pags Controler  */
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+.section .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* !about_us */
+.content #video_about {
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+/* *Daora serve para a tela se adaptar quando fica menor o maior a janela do navegador
+    *ou com menos Zoom ou mais Zoom */
+@media (min-aspect-ratio: 16/9) {
+    #video_about {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #video_about {
+        width: auto;
+        height: 100%;
+    }
+}
+/*  */
+.content h1 {
+    width: 80%;
+    font-family: "Lato", sans-serif;
+    color: #eee;
+    padding: 8px;
+    background-color: #232323;
+    border-radius: 10px;
+    font-size: 4em;
+    font-weight: 300;
+    text-align: center;
+}
+.content span {
+    color: #e26f10;
+}
+/* !Second Section (2) */
+.section:nth-child(3) {
+    background-color: #313131;
+}
+.sec2Content {
+    display: inline-block;
+    width: 25%;
+    margin-top: 30px;
+    padding: 70px;
+    text-align: center;
+}
+.sec2Content img {
+    height: 400px;
+    width: 500px;
+}
